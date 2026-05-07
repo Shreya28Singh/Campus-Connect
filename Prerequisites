@@ -1,0 +1,39 @@
+# Campus Connect Desktop App
+
+## System Requirements
+- Windows 10 or higher (64-bit recommended)  
+- Microsoft Visual C++ Redistributable (x64) installed:  
+[Download VC++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist)  
+
+> Python is **not required** for users since the app is packaged as a standalone `.exe`.
+- Python 3.11 or above
+- pip (Python Package Manager)
+- Git
+- Web Browser (Chrome/Edge/Firefox)
+
+### Required Python Packages
+
+```bash
+pip install Flask==3.0.0 Werkzeug>=3.0.0 pywebview
+---
+Before running the project, make sure the following software is installed on your system:
+
+
+## Installation
+1. Extract the ZIP folder `CampusConnectApp.zip` to any location.  
+2. Ensure the following files/folders are present inside:
+
+CampusConnectApp/
+├─ app.exe
+├─ database.db
+└─ README.md
+
+
+3. Double-click `app.exe` to run the application.  
+
+> The app will open in a native desktop window using PyWebview.
+
+
+## Contact / Support
+**Developer:** Shreya Singh  
+**Email:** shreya.singh23@tnu.in
