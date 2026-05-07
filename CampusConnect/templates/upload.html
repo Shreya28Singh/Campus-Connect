@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-container">
+    <h2>Upload Resource</h2>
+    <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <select name="category" required>
+            <option value="Notes">Notes</option>
+            <option value="Question Papers">Question Papers</option>
+            <option value="Books">Books</option>
+            <option value="Syllabus">Syllabus</option>
+        </select>
+        <select name="year" required>
+            <option value="1st Year">1st Year</option>
+            <option value="2nd Year">2nd Year</option>
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+        </select>
+        <select name="semester" required>
+            <option value="Sem 1">Sem 1</option>
+            <option value="Sem 2">Sem 2</option>
+            <option value="Sem 3">Sem 3</option>
+            <option value="Sem 4">Sem 4</option>
+            <option value="Sem 5">Sem 5</option>
+            <option value="Sem 6">Sem 6</option>
+            <option value="Sem 7">Sem 7</option>
+            <option value="Sem 8">Sem 8</option>
+        </select>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <button type="submit">Upload</button>
+    </form>
+</div>
+{% endblock %}

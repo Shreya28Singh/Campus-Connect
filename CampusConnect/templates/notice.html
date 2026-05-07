@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page">
+  <h2 class="section-title">Post a Notice</h2>
+  <form method="POST" class="form wide">
+    <div class="row">
+      <label>Title</label>
+      <input type="text" name="title" required>
+    </div>
+    <div class="row">
+      <label>Content</label>
+      <textarea name="content" rows="5" required></textarea>
+    </div>
+    <button class="btn-primary" type="submit">Publish Notice</button>
+  </form>
+</section>
+
+<hr>
+
+<section class="page">
+  <h2 class="section-title">All Notices</h2>
+  {% if notices %}
+    <ul>
+      {% for notice in notices %}
+        <li>
+          <h3>{{ notice['title'] }}</h3>
+          <p>{{ notice['content'] }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No notices yet.</p>
+  {% endif %}
+</section>
+{% endblock %}

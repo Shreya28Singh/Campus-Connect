@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-container">
+    <h2>Download Resources</h2>
+    <form action="{{ url_for('download') }}" method="POST">
+        <select name="category">
+            <option value="">Select Category</option>
+            <option value="Notes">Notes</option>
+            <option value="Question Papers">Question Papers</option>
+            <option value="Books">Books</option>
+            <option value="Syllabus">Syllabus</option>
+        </select>
+        <select name="year">
+            <option value="">Select Year</option>
+            <option value="1st Year">1st Year</option>
+            <option value="2nd Year">2nd Year</option>
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+        </select>
+        <select name="semester">
+            <option value="">Select Semester</option>
+            <option value="Sem 1">Sem 1</option>
+            <option value="Sem 2">Sem 2</option>
+            <option value="Sem 3">Sem 3</option>
+            <option value="Sem 4">Sem 4</option>
+            <option value="Sem 4">Sem 5</option>
+            <option value="Sem 4">Sem 6</option>
+            <option value="Sem 4">Sem 7</option>
+            <option value="Sem 4">Sem 8</option>
+        </select>
+        <input type="text" name="subject" placeholder="Subject">
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% for file in files %}
+        <li><a href="{{ url_for('files', filename=file[1]) }}" download>{{ file[1] }}</a> ({{ file[2] }})</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

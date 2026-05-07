@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Upload Notice</h2>
+    <form method="POST">
+        <label>Title:</label><br>
+        <input type="text" name="title" required><br><br>
+
+        <label>Content:</label><br>
+        <textarea name="content" rows="5" cols="40" required></textarea><br><br>
+
+        <button type="submit">Upload</button>
+    </form>
+</div>
+{% endblock %}
